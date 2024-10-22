@@ -1,0 +1,33 @@
+def novo_artista(artistas):
+    artistas.append
+    print(artistas)
+
+def sub_artista(antigo, novo):
+    indice = artistas.index(antigo)
+    artistas[indice] = novo
+    print(artistas)
+
+def lista_atual():
+    print(artistas)
+
+def sair():
+    exit
+
+print("--------SISTEMAS DE SHOW--------")
+
+print("MENU: ")
+print("1.Inseris artista na lista")
+print("2.Substituir artista")
+print("3.lista atual")
+print("4.sair")
+
+menu = (input("O que vc quer fazer?"))
+
+if menu == 1:
+    novo = input("Insira o novo artista: ")
+    novo_artista(novo)
+    print(novo_artista)
+
+elif menu == 2:
+    antigo = input("Qualm sera removido: ")
+    novo = input("qaul o novo artista: ")

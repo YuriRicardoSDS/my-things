@@ -1,0 +1,27 @@
+import math
+import statistics
+import random
+
+def raiz_quadrada(valor):
+    return math.sqrt(valor)
+
+def aleatorio(valor):
+    return random.randint(0, valor)
+
+def fatorial(valor):
+    return math.factorial(valor)
+
+def coseno(valor):
+    return math.acos(valor)
+
+
+def main():
+    numero_aleatorio = aleatorio(1000)
+    print("O numero gerado foi: ", numero_aleatorio)
+
+    print("A raiz quadrada do numero é: ", raiz_quadrada(numero_aleatorio))
+
+    print("O fatorial do numero é: ", fatorial(numero_aleatorio))
+
+    print("O coseno do numero é:", coseno(numero_aleatorio)) 
+main()

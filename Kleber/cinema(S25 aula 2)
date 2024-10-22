@@ -1,0 +1,39 @@
+def reservar(sala, fileira, assento):
+    if sala[fileira-1][assento-1] == 0:
+        sala[fileira-1][assento-1] = 1
+        print(f"Você reservou a cadeira {assento} da fileira {fileira}!")
+    else:
+        print(f"Este lugar já foi reservado!")
+
+def cancelar(sala, fileira, assento):
+    if sala[fileira-1][assento-1] == 1:
+        sala[fileira-1][assento-1] = 0
+        print(f"Você cancelou a cadeira {assento} da fileira {fileira}!")
+    else:
+        print("Este lugar não está reservado!")
+
+def exibir_sala(sala):
+    for fila in sala:
+        print(" ".join(map(str,fila)))
+
+
+sala = [[0]*8 for fila in range (5)]
+
+print("MAPA DE CADEIRAS: ")
+exibir_sala(sala)
+
+def main():
+    print("O que deseja fazer?\n Digite \n1. para RESERVAR \n2. para CANCELAR\n")
+    menu = int(input("Escolha: "))
+    if menu == 1:
+        fileira = int(input("Qual fileira você deseja reservar?"))
+        assento = int(input("Qual cadeira você deseja reservar?"))
+        reservar(sala, fileira, assento)
+    elif menu == 2:
+        fileira = int(input("Qual fileira você deseja reservar?"))
+        assento = int(input("Qual cadeira você deseja reservar?"))
+        cancelar(sala, fileira, assento)
+
+while True:
+    main()
+    exibir_sala(sala)

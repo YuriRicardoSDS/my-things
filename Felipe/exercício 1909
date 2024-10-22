@@ -1,0 +1,27 @@
+class Funcionario:
+    def __init__(self, nome, salario):
+        self.nome = nome
+        self.salario = salario
+
+    def Bonus(self):
+        self.salario = self.salario * 1.10
+        return self.salario
+
+
+    def mostrar_detalhes(self):
+        print("nome: ", self.nome, "salario: ", self.salario)
+
+class Gerente(Funcionario):
+    def __init__(self, nome, salario, departamento):
+        super().__init__(nome, salario)
+        self.departamento = departamento
+
+    def mostrar_detalhes(self):
+        print("nome: ", self.nome, "salario: ", self.salario, "Departamento: ", self.departamento)
+
+    def Bonus(self):
+        self.salario = self.salario * 1.15
+        return self.salario
+    
+    def Bonus(self):
+        

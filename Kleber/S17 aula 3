@@ -1,0 +1,14 @@
+def escolher_sala(tipo_reuniao, qtd_pessoas):
+    if tipo_reuniao == "executiva":
+        return "Sala Grande"
+    elif qtd_pessoas <= 5:
+        return "Sala Pequena"
+    elif 6<=qtd_pessoas<=15:
+        return "Sala Media"
+    else:
+        return "Sala grande"
+        
+tipo_reuniao = input("Qual o tipo de reuniao (executiva/normal): ")
+qtd_pessoas = int(input("Numero de pessoas: "))
+sala = escolher_sala(tipo_reuniao, qtd_pessoas)
+print(f"A reuniao sera na {sala}.")
