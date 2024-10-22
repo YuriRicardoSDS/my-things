@@ -1,2 +1,0 @@
-artistas = ["Teto", "LN", "Matue", "Wiu", "Ryu"]
-antigo = input("escolha um artista para sair")
